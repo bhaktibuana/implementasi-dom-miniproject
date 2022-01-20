@@ -1,0 +1,77 @@
+.signin-content-container {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-top: 75px;
+}
+
+.signin-background-container {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 0px;
+  max-height: calc(100vh - 48px - 75px);
+}
+
+.signin-background-container img {
+  width: 100%;
+  height: calc(100vh - 48px - 75px);
+  object-fit: cover;
+}
+
+.signin-card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: calc(100vh - 48px - 75px);
+}
+
+.signin-card {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  justify-content: center;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px 1px #e0e0e0;
+  margin-inline: 30px;
+}
+
+.signin-card p {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .signin-background-container {
+    display: flex;
+    width: 40vw;
+  }
+  
+  .signin-card-container {
+    width: 60vw;
+  }
+
+  .signin-card {
+    margin-inline: 0px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .signin-background-container {
+    display: flex;
+    width: 60vw;
+  }
+  
+  .signin-card-container {
+    width: 40vw;
+  }
+
+  .signin-card {
+    margin-inline: 0px;
+  }
+}
