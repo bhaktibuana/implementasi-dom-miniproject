@@ -3,6 +3,13 @@ import "./Footer.css";
 import { BsFacebook, BsInstagram, BsTwitter, BsGithub } from "react-icons/bs";
 
 const Footer = () => {
+  if (document.getElementById("btn-feedback") !== null) {
+    document.getElementById("btn-feedback").onclick = (e) => {
+      e.preventDefault();
+      alert("Thanks for giving us feedback!");
+    };
+  }
+
   return (
     <>
       <div className="footer-container">
@@ -29,7 +36,10 @@ const Footer = () => {
                   rows="5"
                 ></textarea>
               </div>
-              <button className="btn btn-primary">Submit</button>
+              
+              <button id="btn-feedback" className="btn btn-primary">
+                Submit
+              </button>
             </form>
           </div>
 

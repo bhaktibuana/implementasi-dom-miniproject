@@ -26,6 +26,18 @@ const ProductDetails = (props) => {
     return currencyArr.join("").replace(/,/g, ".");
   };
 
+  if (document.getElementById("modal-button-wishlist") !== null) {
+    document.getElementById("modal-button-wishlist").onclick = () => {
+      alert("Successfully added to your wishlist!");
+    }
+  }
+
+  if (document.getElementById("modal-button-add-to-cart") !== null) {
+    document.getElementById("modal-button-add-to-cart").onclick = () => {
+      alert("Successfully added to cart!");
+    }
+  }
+
   return (
     <>
       <Modal
@@ -90,7 +102,6 @@ const ProductDetails = (props) => {
             id="modal-button-wishlist"
             type="button"
             class="btn btn-danger"
-            // onClick={props.onHide}
           >
             <div className="modal-button-container">
               <div className="modal-button-icon-container">
@@ -103,7 +114,6 @@ const ProductDetails = (props) => {
             id="modal-button-add-to-cart"
             type="button"
             class="btn btn-success"
-            onClick={props.onHide}
           >
             <div className="modal-button-container">
               <div className="modal-button-icon-container">
